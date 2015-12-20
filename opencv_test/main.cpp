@@ -5,7 +5,7 @@ int main()
 {
 	Mat img = imread("C:/Users/Sarah/Desktop/2.jpg");
 
-	imshow("color", img);
+	cv::imshow("color", img);
 
 	cvtColor(img, img, CV_RGB2GRAY);
 
