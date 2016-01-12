@@ -37,9 +37,9 @@ namespace learn_wpf_xaml
         {
             base.OnClick();
 
-            //应用x:Key
-            Human h = (Human)this.FindResource("human");
-            MessageBox.Show(h.child.name);
+            ////应用x:Key
+            //Human h = (Human)this.FindResource("human");
+            //MessageBox.Show(h.child.name);
 
             //新建并弹出窗口
             this.Content = "弹出新窗口";

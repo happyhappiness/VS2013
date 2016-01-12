@@ -3,13 +3,19 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:local ="clr-namespace:learn_wpf_xaml"
         Title="MainWindow" Height="350" Width="525">
-    <Grid Background="White">
+    <Grid Background="White" Margin="10">
         <Grid.RowDefinitions>
-            <RowDefinition Height="40"/>
-            <RowDefinition Height="120"/>
+            <RowDefinition Height="20*"/>
+            <RowDefinition Height="120*"/>
+            <RowDefinition Height="100*"/>
         </Grid.RowDefinitions>
-        <local:MyButton windowGenerated="{x:Type TypeName=local:WindowGenerated }" Height="20" Grid.Row="0" Margin="5" Content ="我是按钮，快点我" Background="#FFE86464" />
-        <Ellipse Height="100" Width="100" Grid.Row="1" Margin="5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="100"/>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <local:MyButton  Grid.Row="0" Grid.ColumnSpan="3" windowGenerated="{x:Type TypeName=local:WindowGenerated }" Content ="我是按钮，快点我" Background="#FFE86464" />
+        <Ellipse Grid.Row="1" Grid.ColumnSpan="3" Height="100" Width="100" HorizontalAlignment="Center">
             <Ellipse.Fill>
                 <RadialGradientBrush GradientOrigin="0.25,0.25" RadiusX="0.75" RadiusY="0.75">
                     <RadialGradientBrush.GradientStops>
@@ -20,9 +26,12 @@
                 </RadialGradientBrush>
             </Ellipse.Fill>
         </Ellipse>
+        <TextBox Grid.Row="2" Text="请输入文字" AcceptsReturn="True" TextWrapping="Wrap"/>
+        <GridSplitter Grid.Row="2" Grid.Column="1" ShowsPreview="True" Width="5" HorizontalAlignment="Center" VerticalAlignment="Stretch"/>
+        <TextBox Grid.Row="2" Grid.Column="2" Text="也可以输入文字哦"  AcceptsReturn="True" TextWrapping="Wrap"/>
     </Grid>
 
     <Window.Resources>
-        <local:Human x:Key="human" child="你还有很多路要走"/>
+        <!--<local:Human x:Key="human" child="你还有很多路要走"/>-->
     </Window.Resources>
 </Window>
