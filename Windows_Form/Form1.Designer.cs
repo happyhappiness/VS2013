@@ -49,7 +49,7 @@
             this.ClientSize = new System.Drawing.Size(284, 261);
             this.Controls.Add(this.btShowText);
             this.Name = "Form1";
-            this.Text = "Form1";
+            this.Text = "实验样例";
             this.ResumeLayout(false);
             this.PerformLayout();
 

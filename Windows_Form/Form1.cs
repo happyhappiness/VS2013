@@ -19,8 +19,19 @@ namespace Windows_Form
 
         private void button1_Click(object sender, EventArgs e)
         {
-            MessageBox.Show("现在可以看到了吧，嘎嘎嘎");
-            this.btShowText.Text = "确实看不到呢";
+            ((Button)sender).Text = "我要生成新按钮了呢";
+            Button newButton = new Button();
+            newButton.Text = "我是新按钮";
+            newButton.Location = new Point(0, 10);
+            newButton.Click += new EventHandler(btNew_Click);
+            this.Controls.Add(newButton);
         }
+
+        private void btNew_Click(object sender, EventArgs e)
+        {
+            ((Button)sender).Text = "我被点击了";
+        }
+
+
     }
 }
