@@ -5,19 +5,15 @@
         xmlns:local ="clr-namespace:learn_wpf_xaml"
         Title="{x:Static Member=local:WindowGenerated.title}" Height="300" Width="300">
     <StackPanel>
-        <Button Content="第一个"/>
-        <Button Content="第二个"/>
-        <Button Content="第三个"/>
-        <Button Content="第四个" Style="{x:Null}"/>
         <ListBox Margin="5">
-            <ListBox.ItemsSource>
-                <x:Array Type="{x:Type sys:String}">
-                    <sys:String>"嘿嘿"</sys:String>
-                    <sys:String>"嘻嘻"</sys:String>
-                    <sys:String>"哈哈"</sys:String>
-                    <sys:String>"你是不是傻"</sys:String>
-                </x:Array>
-            </ListBox.ItemsSource>
+            <ListBox.Items>
+                <Button Content="第一个"/>
+                <Button Content="第二个"/>
+                <Button Content="第三个"/>
+                <Button x:Name="btClick" Content="第四个,可以点我偶"  Click="Button_Click" Style="{x:Null}"/>
+            </ListBox.Items>
+        </ListBox>
+        <ListBox Margin="5" x:Name="myListBox">
         </ListBox>
     </StackPanel>
     <Window.Resources>
