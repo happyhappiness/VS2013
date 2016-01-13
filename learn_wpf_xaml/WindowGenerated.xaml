@@ -4,23 +4,71 @@
         xmlns:sys="clr-namespace:System;assembly=mscorlib"
         xmlns:local ="clr-namespace:learn_wpf_xaml"
         Title="{x:Static Member=local:WindowGenerated.title}" Height="300" Width="300">
-    <StackPanel>
-        <ListBox Margin="5">
-            <ListBox.Items>
-                <Button Content="第一个"/>
-                <Button Content="第二个"/>
-                <Button Content="第三个"/>
-                <Button x:Name="btClick" Content="第四个,可以点我偶"  Click="Button_Click" Style="{x:Null}"/>
-            </ListBox.Items>
-        </ListBox>
-        <ListBox Margin="5" x:Name="myListBox">
-        </ListBox>
-    </StackPanel>
     <Window.Resources>
         <Style x:Key="{x:Type TypeName=Button}" TargetType="{x:Type TypeName=Button }">
             <Setter Property="Width" Value="40"/>
             <Setter Property="Height" Value="20"/>
             <Setter Property="Margin" Value="5"/>
         </Style>
+        <XmlDataProvider x:Key="xdp_s" XPath="/Files/File">
+            <x:XData>
+                <Files xmlns="">
+                    <File Name ="Chapter1">
+                        <File Name="ClassA">
+                            <File Name="ParagraphA"/>
+                            <File Name="ParagraphB"/>
+                            <File Name="ParagraphC"/>
+                        </File>
+                        <File Name="ClassB">
+                            <File Name="ParagraphA"/>
+                            <File Name="ParagraphB"/>
+                            <File Name="ParagraphC"/>
+                        </File>
+                    </File>
+                    <File Name ="Chapter2">
+                        <File Name="ClassA">
+                            <File Name="ParagraphA"/>
+                            <File Name="ParagraphB"/>
+                            <File Name="ParagraphC"/>
+                        </File>
+                        <File Name="ClassB">
+                            <File Name="ParagraphA"/>
+                            <File Name="ParagraphB"/>
+                            <File Name="ParagraphC"/>
+                        </File>
+                    </File>
+                </Files>
+            </x:XData>
+        </XmlDataProvider>
+        <local:AgeToImage x:Key="ageToImage" />
     </Window.Resources>
+    <StackPanel>
+        <ListView Margin="5" x:Name="listViewEmployee">
+            <ListView.View>
+                <GridView>
+                    <GridViewColumn Header="Id" DisplayMemberBinding="{Binding XPath=@Id}"/>
+                    <GridViewColumn Header="Name" DisplayMemberBinding="{Binding  XPath=@Name}"/>
+                    <GridViewColumn Header="Age" DisplayMemberBinding="{Binding XPath=@Age}"/>
+                    <GridViewColumn Header="Logo">
+                        <GridViewColumn.CellTemplate>
+                            <DataTemplate>
+                            <Image Source="{Binding XPath=@Age, Converter={StaticResource ageToImage}}" Width="20" Height="20" />
+                            </DataTemplate>
+                        </GridViewColumn.CellTemplate>
+                    </GridViewColumn>
+                </GridView>
+            </ListView.View>
+        </ListView>
+        <TextBox x:Name="textBoxId" />
+        <ListBox>
+        <Button x:Name="btClick" Style="{x:Null}" Content="点击我查看控件树" Click="Button_Click" Height="20" />
+        </ListBox>
+        <TreeView ItemsSource="{Binding Source={StaticResource xdp_s} }">
+            <TreeView.ItemTemplate>
+                <HierarchicalDataTemplate ItemsSource="{Binding XPath=File}">
+                    <TextBlock Text="{Binding XPath=@Name }"/>
+                </HierarchicalDataTemplate>
+            </TreeView.ItemTemplate>            
+        </TreeView>
+    </StackPanel>
 </Window>

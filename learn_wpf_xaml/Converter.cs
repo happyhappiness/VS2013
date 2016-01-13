@@ -15,7 +15,7 @@ namespace learn_wpf_xaml
             if (value is string)
             {
                 Human h = new Human();
-                h.name = value as string;
+                h.idName = value as string;
                 return (Object)h;
             }
             return base.ConvertFrom(context, culture, value);
