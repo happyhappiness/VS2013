@@ -175,7 +175,7 @@ int main_2()
 	namedWindow("filtered_image", 0);
 	namedWindow("dst_image", 0);
 	
-	image = imread("02_h.jpg", IMREAD_GRAYSCALE); //读取灰度图像
+	image = imread("01.tif", IMREAD_GRAYSCALE); //读取灰度图像
 	if (!image.data) // Check for invalid input  
 	{
 		cout << "读取错误" << std::endl;
@@ -199,8 +199,8 @@ int main_2()
 
 	if (waitKey(0) == 27)
 	{
-		imwrite("gaborFilter_02_h.jpg", filtered_image);//滤波处理图像保存
-		imwrite("gaborCanny_02_h.jpg", dst_image);//滤波处理图像保存
+		imwrite("gaborFilter_01.jpg", filtered_image);//滤波处理图像保存
+		imwrite("gaborCanny_01.jpg", dst_image);//滤波处理图像保存
 		destroyAllWindows();
 		return 0;
 	}

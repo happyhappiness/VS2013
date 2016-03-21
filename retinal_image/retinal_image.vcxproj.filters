@@ -27,7 +27,10 @@
     <ClCompile Include="Pre_main4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test5.cpp">
+    <ClCompile Include="eraseBackground5.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test6.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
