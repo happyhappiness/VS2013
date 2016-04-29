@@ -55,19 +55,19 @@
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\opencv\opencv_3.1\opencv310.props" />
+    <Import Project="C:\opencv\opencv_2411\opencv2411.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\opencv\opencv_3.1\opencv310.props" />
+    <Import Project="C:\opencv\opencv_2411\opencv2411.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\opencv\opencv_3.1\opencv310.props" />
+    <Import Project="C:\opencv\opencv_2411\opencv2411.props" />
   </ImportGroup>
   <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|X64'" Label="PropertySheets">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
-    <Import Project="C:\opencv\opencv_3.1\opencv310.props" />
+    <Import Project="C:\opencv\opencv_2411\opencv2411.props" />
   </ImportGroup>
   <PropertyGroup Label="UserMacros" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
@@ -75,8 +75,8 @@
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|X64'">
     <LinkIncremental>true</LinkIncremental>
-    <IncludePath>G:\c++\image\FunctionHelper\FunctionHelper;$(IncludePath)</IncludePath>
-    <LibraryPath>G:\c++\image\FunctionHelper\Debug;$(LibraryPath)</LibraryPath>
+    <IncludePath>G:\c++\image\FunctionHelperForMFC\FunctionHelperForMFC;$(IncludePath)</IncludePath>
+    <LibraryPath>G:\c++\image\FunctionHelperForMFC\X64\Debug;$(LibraryPath)</LibraryPath>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <LinkIncremental>false</LinkIncremental>
@@ -113,8 +113,10 @@
     <Link>
       <SubSystem>Console</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>FunctionHelper.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>FunctionHelperForMFC.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <StackReserveSize>
+      </StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
@@ -154,15 +156,21 @@
       <OptimizeReferences>true</OptimizeReferences>
       <AdditionalDependencies>FunctionHelper.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <StackReserveSize>
+      </StackReserveSize>
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
+    <ClCompile Include="connect8.cpp" />
     <ClCompile Include="detectEdge3.cpp" />
     <ClCompile Include="FindCurve1.cpp" />
-    <ClCompile Include="gabor_main2.cpp" />
+    <ClCompile Include="hassianCorner2.cpp" />
+    <ClCompile Include="homography7.cpp" />
     <ClCompile Include="Pre_main4.cpp" />
     <ClCompile Include="eraseBackground5.cpp" />
-    <ClCompile Include="test6.cpp" />
+    <ClCompile Include="match6.cpp" />
+    <ClCompile Include="test0.cpp" />
+    <ClCompile Include="test9.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

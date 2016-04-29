@@ -169,13 +169,13 @@ void trackBarForThreshold2(int , void* = 0){
 	imshow("dst_image", dst_image);
 }
 
-int main_2()
+int main()
 {
 	namedWindow("src_image", 0);
 	namedWindow("filtered_image", 0);
 	namedWindow("dst_image", 0);
 	
-	image = imread("01.tif", IMREAD_GRAYSCALE); //∂¡»°ª“∂»ÕºœÒ
+	image = imread("01_pre.tif", IMREAD_GRAYSCALE); //∂¡»°ª“∂»ÕºœÒ
 	if (!image.data) // Check for invalid input  
 	{
 		cout << "∂¡»°¥ÌŒÛ" << std::endl;

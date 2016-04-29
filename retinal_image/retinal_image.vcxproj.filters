@@ -21,16 +21,28 @@
     <ClCompile Include="FindCurve1.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="gabor_main2.cpp">
-      <Filter>源文件</Filter>
-    </ClCompile>
     <ClCompile Include="Pre_main4.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
     <ClCompile Include="eraseBackground5.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
-    <ClCompile Include="test6.cpp">
+    <ClCompile Include="hassianCorner2.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="match6.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test0.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="homography7.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="connect8.cpp">
+      <Filter>源文件</Filter>
+    </ClCompile>
+    <ClCompile Include="test9.cpp">
       <Filter>源文件</Filter>
     </ClCompile>
   </ItemGroup>
