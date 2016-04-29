@@ -1,0 +1,490 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#ifndef APSTUDIO_INVOKED
+#include "targetver.h"
+#endif
+#include "afxres.h"
+#include "verrsrc.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// 中文(简体，中国) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE LANG_CHINESE, SUBLANG_CHINESE_SIMPLIFIED
+#pragma code_page(936)
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#ifndef APSTUDIO_INVOKED\r\n"
+    "#include ""targetver.h""\r\n"
+    "#endif\r\n"
+    "#include ""afxres.h""\r\n"
+    "#include ""verrsrc.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "#define _AFX_NO_OLE_RESOURCES\r\n"
+    "#define _AFX_NO_TRACKER_RESOURCES\r\n"
+    "#define _AFX_NO_PROPERTY_RESOURCES\r\n"
+    "\r\n"
+    "#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)\r\n"
+    "LANGUAGE 4, 2\r\n"
+    "#include ""res\\testMFC.rc2""  // 非 Microsoft Visual C++ 编辑的资源\r\n"
+    "#include ""l.CHS\\afxres.rc""      // 标准组件\r\n"
+    "#endif\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDR_MAINFRAME           ICON                    "res\\testMFC.ico"
+IDR_testMFCTYPE         ICON                    "res\\testMFCDoc.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDR_MAINFRAME           BITMAP                  "res\\Toolbar.bmp"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Toolbar
+//
+
+IDR_MAINFRAME TOOLBAR 16, 14
+BEGIN
+    BUTTON      ID_FILE_OPEN
+    BUTTON      ID_FILE_SAVE
+    SEPARATOR
+    BUTTON      ID_EDIT_ERASEBACK
+    BUTTON      ID_EDIT_HOMORPRE
+    BUTTON      ID_EDIT_RETRCURVE
+    BUTTON      ID_Delete
+    SEPARATOR
+    BUTTON      ID_ConnectAuto
+    BUTTON      ID_ConnectHand
+    BUTTON      ID_CHANGEMODE
+    BUTTON      ID_APP_ABOUT
+    SEPARATOR
+    BUTTON      ID_OPEN_MULTI
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_MAINFRAME MENU
+BEGIN
+    POPUP "文件(&F)"
+    BEGIN
+        MENUITEM "打开(&O)...\tCtrl+O",           ID_FILE_OPEN
+        MENUITEM "保存(&S)\tCtrl+S",              ID_FILE_SAVE
+        MENUITEM SEPARATOR
+        MENUITEM SEPARATOR
+        MENUITEM "退出(&X)",                      ID_APP_EXIT
+    END
+    POPUP "编辑(&E)"
+    BEGIN
+        MENUITEM SEPARATOR
+        MENUITEM "搽除背景(&1)...\tCtrl+1",         ID_EDIT_ERASEBACK
+        MENUITEM "频率域预处理(&2)...\tCtrl+2",       ID_EDIT_HOMORPRE
+        MENUITEM "提取曲线(&3)...\tCtrl+3",         ID_EDIT_RETRCURVE
+        MENUITEM "旋转放缩(&R)...\tCtrl+R",         ID_CHANGEMODE
+        MENUITEM "删除图片(&D)...\tCtrl+D",         ID_Delete
+    END
+    POPUP "拼接"
+    BEGIN
+        MENUITEM "自动拼接(&CA)...\tCtrl+A",        ID_ConnectAuto
+        MENUITEM "手动拼接(&CH)...\tCtrl+H",        ID_ConnectHand
+    END
+    POPUP "视图(&V)"
+    BEGIN
+        MENUITEM "工具栏(&T)",                     ID_VIEW_TOOLBAR
+        MENUITEM "状态栏(&S)",                     ID_VIEW_STATUS_BAR
+    END
+    POPUP "帮助(&H)"
+    BEGIN
+        MENUITEM "关于 testMFC(&A)...",           ID_APP_ABOUT
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDR_MAINFRAME ACCELERATORS
+BEGIN
+    "N",            ID_FILE_NEW,            VIRTKEY, CONTROL
+    "O",            ID_FILE_OPEN,           VIRTKEY, CONTROL
+    "S",            ID_FILE_SAVE,           VIRTKEY, CONTROL
+    "1",            ID_EDIT_ERASEBACK,      VIRTKEY, CONTROL
+    "2",            ID_EDIT_HOMORPRE,       VIRTKEY, CONTROL
+    "3",            ID_EDIT_RETRCURVE,      VIRTKEY, CONTROL
+    "O",            ID_OPEN_SINGLE,         VIRTKEY, CONTROL
+    "M",            ID_OPEN_MULTI,          VIRTKEY, CONTROL
+    "A",            ID_ConnectAuto,         VIRTKEY, CONTROL
+    "H",            ID_ConnectHand,         VIRTKEY, CONTROL
+    "R",            ID_CHANGEMODE,          VIRTKEY, CONTROL
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 0, 0, 170, 62
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "关于 testMFC"
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+    ICON            IDR_MAINFRAME,IDC_STATIC,14,14,21,20
+    LTEXT           "testMFC，1.0 版",IDC_STATIC,42,14,114,8,SS_NOPREFIX
+    LTEXT           "Copyright (C) 2016",IDC_STATIC,42,26,114,8
+    DEFPUSHBUTTON   "确定",IDOK,113,41,50,14,WS_GROUP
+END
+
+IDD_TESTMFC_FORM DIALOGEX 0, 0, 320, 200
+STYLE DS_SETFONT | DS_FIXEDSYS | WS_CHILD
+FONT 9, "MS Shell Dlg", 0, 0, 0x1
+BEGIN
+END
+
+IDD_DIALOG_ERASE DIALOGEX 0, 0, 310, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "搽除背景参数设置"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK_ERASE,189,156,50,14
+    PUSHBUTTON      "取消",IDCANCEL_ERASE,244,156,50,14
+    CONTROL         "",IDC_SLIDER_THRES_ERASE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,158,30,114,15
+    LTEXT           "红色分量阈值",IDC_STATIC_1,30,34,52,8
+    LTEXT           "缩进步数",IDC_STATIC_2,30,79,35,8
+    CONTROL         "",IDC_SPIN_STEP_ERASE,"msctls_updown32",UDS_ARROWKEYS,161,77,12,14
+    EDITTEXT        IDC_EDIT_STEP_ERASE,109,78,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_THRES_ERASE,112,34,40,14,ES_CENTER | ES_AUTOHSCROLL | ES_NUMBER
+END
+
+IDD_DIALOG_HOMORPRE DIALOGEX 0, 0, 310, 177
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "频域增强"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK,199,156,50,14
+    PUSHBUTTON      "取消",IDCANCEL,253,156,50,14
+    LTEXT           "缩进步数",IDC_STATIC_HOMO1,48,32,35,8
+    LTEXT           "滤波低因子",IDC_STATIC_HOMO2,48,60,44,8
+    LTEXT           "滤波高因子",IDC_STATIC_HOMO3,48,84,44,8
+    LTEXT           "滤波阈值",IDC_STATIC_HOMO4,48,113,35,8
+    EDITTEXT        IDC_EDIT_THRES__HOMO,121,107,58,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_HIGHER_HOMO,121,78,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_LOWER_HOMO,121,54,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_EDIT_STEP_HOMO,121,26,25,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SPIN_STEP_HOMO,"msctls_updown32",UDS_ARROWKEYS,151,26,12,14
+END
+
+IDD_DIALOG_RETRCURVE DIALOGEX 0, 0, 311, 231
+STYLE DS_SETFONT | DS_MODALFRAME | DS_FIXEDSYS | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Dialog"
+FONT 8, "MS Shell Dlg", 400, 0, 0x1
+BEGIN
+    DEFPUSHBUTTON   "确定",IDOK_RETRCURVE,198,210,50,14
+    PUSHBUTTON      "取消",IDCANCEL_RETRCURVE,253,210,50,14
+    LTEXT           "连通类型",IDC_STATIC_RETRCURVE1,33,25,37,14
+    LTEXT           "分割阈值",IDC_STATIC_RETRCURVE4,31,69,37,14
+    LTEXT           "点数下限",IDC_STATIC_RETRCURVE5,33,155,37,14
+    LISTBOX         IDC_LIST_CONNECTYPE_RETRCURVE,115,25,48,11,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LISTBOX         IDC_LIST_LIMITPOINTS_RETRCURVE,113,154,48,11,LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    EDITTEXT        IDC_EDIT_THRESHOLD_RETRCURVE,111,69,26,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SLIDER_THRESHOLD_RETRCURVE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,159,68,100,15
+    LTEXT           "缩进步数",IDC_STATIC_RETRCURVE6,32,114,37,8
+    EDITTEXT        IDC_EDIT_STEP_RETRCURVE,110,109,26,14,ES_AUTOHSCROLL | ES_NUMBER
+    CONTROL         "",IDC_SLIDER_RETRCURVE,"msctls_trackbar32",TBS_AUTOTICKS | TBS_BOTH | WS_TABSTOP,160,108,100,15
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Version
+//
+
+VS_VERSION_INFO VERSIONINFO
+ FILEVERSION 1,0,0,1
+ PRODUCTVERSION 1,0,0,1
+ FILEFLAGSMASK 0x3fL
+#ifdef _DEBUG
+ FILEFLAGS 0x1L
+#else
+ FILEFLAGS 0x0L
+#endif
+ FILEOS 0x40004L
+ FILETYPE 0x1L
+ FILESUBTYPE 0x0L
+BEGIN
+    BLOCK "StringFileInfo"
+    BEGIN
+        BLOCK "080404b0"
+        BEGIN
+            VALUE "CompanyName", "重庆大学学生"
+            VALUE "FileDescription", "testMFC"
+            VALUE "FileVersion", "1.0.0.1"
+            VALUE "InternalName", "testMFC.exe"
+            VALUE "LegalCopyright", "重庆大学学生。  保留所有权利。"
+            VALUE "OriginalFilename", "testMFC.exe"
+            VALUE "ProductName", "眼底图像拼接"
+            VALUE "ProductVersion", "1.0.0.1"
+        END
+    END
+    BLOCK "VarFileInfo"
+    BEGIN
+        VALUE "Translation", 0x804, 1200
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO
+BEGIN
+    IDD_ABOUTBOX, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 163
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 55
+    END
+
+    IDD_TESTMFC_FORM, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 313
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 193
+    END
+
+    IDD_DIALOG_ERASE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_DIALOG_HOMORPRE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 170
+    END
+
+    IDD_DIALOG_RETRCURVE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 303
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 224
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE
+BEGIN
+    IDP_OLE_INIT_FAILED     "OLE 初始化失败。  请确保 OLE 库是正确的版本。"
+END
+
+STRINGTABLE
+BEGIN
+    IDR_MAINFRAME           "testMFC\n\ntestMFC\n\n\ntestMFC.Document\ntestMFC.Document"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_APP_TITLE       "testMFC"
+    AFX_IDS_IDLEMESSAGE     "就绪"
+END
+
+STRINGTABLE
+BEGIN
+    ID_INDICATOR_EXT        "EXT"
+    ID_INDICATOR_CAPS       "CAP"
+    ID_INDICATOR_NUM        "NUM"
+    ID_INDICATOR_SCRL       "SCRL"
+    ID_INDICATOR_OVR        "OVR"
+    ID_INDICATOR_REC        "REC"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_NEW             "创建新文档\n新建"
+    ID_FILE_OPEN            "打开现有文档\n打开"
+    ID_FILE_CLOSE           "关闭活动文档\n关闭"
+    ID_FILE_SAVE            "保存活动文档\n保存"
+    ID_FILE_SAVE_AS         "用新名称保存活动文档\n另存为"
+END
+
+STRINGTABLE
+BEGIN
+    ID_APP_ABOUT            "显示程序信息、版本号和版权信息\n关于"
+    ID_APP_EXIT             "退出应用程序；提示保存文档\n退出"
+END
+
+STRINGTABLE
+BEGIN
+    ID_FILE_MRU_FILE1       "打开此图片"
+    ID_FILE_MRU_FILE2       "打开此图片"
+    ID_FILE_MRU_FILE3       "打开此图片"
+    ID_FILE_MRU_FILE4       "打开此图片"
+    ID_FILE_MRU_FILE5       "打开此图片"
+    ID_FILE_MRU_FILE6       "打开此图片"
+    ID_FILE_MRU_FILE7       "打开此图片"
+    ID_FILE_MRU_FILE8       "打开此图片"
+    ID_FILE_MRU_FILE9       "打开此图片"
+    ID_FILE_MRU_FILE10      "打开此图片"
+    ID_FILE_MRU_FILE11      "打开此图片"
+    ID_FILE_MRU_FILE12      "打开此图片"
+    ID_FILE_MRU_FILE13      "打开此图片"
+    ID_FILE_MRU_FILE14      "打开此图片"
+    ID_FILE_MRU_FILE15      "打开此图片"
+    ID_FILE_MRU_FILE16      "打开此图片"
+END
+
+STRINGTABLE
+BEGIN
+    ID_NEXT_PANE            "切换图片编辑模式，旋转模式和放缩模式\n旋转放缩"
+    ID_PREV_PANE            "切换回上一个窗格\n上一窗格"
+END
+
+STRINGTABLE
+BEGIN
+    ID_WINDOW_SPLIT         "将活动窗口拆分为多个窗格\n拆分"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_CLEAR           "清除所选内容\n清除"
+    ID_EDIT_CLEAR_ALL       "清除全部内容\n全部清除"
+    ID_EDIT_COPY            "复制所选内容，将其放入剪贴板\n复制"
+    ID_EDIT_CUT             "剪切所选内容，将其放入剪贴板\n剪切"
+    ID_EDIT_FIND            "查找指定的文本\n查找"
+    ID_EDIT_PASTE           "插入剪贴板内容\n粘贴"
+    ID_EDIT_REPEAT          "重复上一操作\n重复"
+    ID_EDIT_REPLACE         "用其他文本替换特定的文本\n替换"
+    ID_EDIT_SELECT_ALL      "选定整个文档\n全选"
+    ID_EDIT_UNDO            "撤消上一操作\n撤消"
+    ID_EDIT_REDO            "重做上次撤消的操作\n重做"
+END
+
+STRINGTABLE
+BEGIN
+    ID_VIEW_TOOLBAR         "显示或隐藏工具栏\n切换工具栏"
+    ID_VIEW_STATUS_BAR      "显示或隐藏状态栏\n切换状态栏"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCSIZE          "更改窗口大小"
+    AFX_IDS_SCMOVE          "更改窗口位置"
+    AFX_IDS_SCMINIMIZE      "将窗口缩小成图标"
+    AFX_IDS_SCMAXIMIZE      "将窗口放大到最大尺寸"
+    AFX_IDS_SCNEXTWINDOW    "切换到下一个文档窗口"
+    AFX_IDS_SCPREVWINDOW    "切换到上一个文档窗口"
+    AFX_IDS_SCCLOSE         "关闭活动窗口并提示保存文档"
+END
+
+STRINGTABLE
+BEGIN
+    AFX_IDS_SCRESTORE       "将窗口恢复到正常大小"
+    AFX_IDS_SCTASKLIST      "激活任务列表"
+END
+
+STRINGTABLE
+BEGIN
+    ID_EDIT_ERASEBACK       "搽除眼底图片背景\n搽除背景"
+    ID_EDIT_HOMORPRE        "同态滤波频域增强\n频域增强"
+    ID_EDIT_RETRCURVE       "基于中心线的视网膜提取\n视网膜分割"
+END
+
+STRINGTABLE
+BEGIN
+    ID_OPEN_SINGLE          "单图模式：打开另一张图片\n单图模式"
+    ID_OPEN_MULTI           "多图模式：加入另一张图片\n多图模式"
+    ID_ConnectAuto          "自动拼接当前图片列表\n自动拼接"
+    ID_ConnectHand          "将当前窗口图像拼合\n手动拼接"
+END
+
+STRINGTABLE
+BEGIN
+    ID_CHANGEMODE           "切换分图编辑模式，旋转和放缩模式\n旋转放缩"
+    ID_Delete               "删除当前图片\n删除图片"
+END
+
+#endif    // 中文(简体，中国) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+#define _AFX_NO_OLE_RESOURCES
+#define _AFX_NO_TRACKER_RESOURCES
+#define _AFX_NO_PROPERTY_RESOURCES
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_CHS)
+LANGUAGE 4, 2
+#include "res\testMFC.rc2"  // 非 Microsoft Visual C++ 编辑的资源
+#include "l.CHS\afxres.rc"      // 标准组件
+#endif
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
